@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
 function getAllDirectories(dir, baseDir = "") {
   let dirs = new Set();
@@ -37,9 +37,8 @@ const allowedScopes = Array.from(getAllDirectories(process.cwd())).sort();
 
 allowedScopes.push("root");
 
-module.exports = {
+export default {
   extends: ["@commitlint/config-conventional"],
-
   rules: {
     "scope-empty": [2, "never"],
     "subject-case": [0],

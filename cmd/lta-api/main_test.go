@@ -7,6 +7,6 @@ func TestDummy(t *testing.T) {
 	actual := true
 
 	if expected != actual {
-		t.Errorf("ERROR!!!")
+		t.Errorf("ERROR!!")
 	}
 }

@@ -3,3 +3,7 @@
 
 bin
 tmp
+
+node_modules/
+
+.husky/_/

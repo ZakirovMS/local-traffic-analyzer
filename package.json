@@ -1,0 +1,28 @@
+{
+  "name": "local-traffic-analyzer",
+  "private": "true",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "commitlint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svesh3000/local-traffic-analyzer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/svesh3000/local-traffic-analyzer/issues"
+  },
+  "homepage": "https://github.com/svesh3000/local-traffic-analyzer#readme"
+}

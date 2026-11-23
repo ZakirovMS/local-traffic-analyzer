@@ -43,7 +43,7 @@ go test -race ./...
 Используем стандартный линтер `golangci-lint`.
 Установка:
 ```bash
-go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.15.0
 ```
 Запуск:
 ```bash
@@ -52,8 +52,9 @@ golangci-lint run
 
 ## Как работает CI
 Когда вы создаете Pull Request, меняющий файлы в папке `cmd/` (или `go.mod`), автоматически запускается workflow **CI for Go (Backend)**. Он делает две вещи параллельно:
-1. **Go Lint** — запускает `golangci-lint run`
-2. **Go Test** — запускает `go test -race ./...`.
+1. **Go Lint** — проверяет код на ошибки и стилистику (`golangci-lint`).
+2. **Go Test** — запускает тесты (`go test -race ./...`). Тесты запускаются на трёх ОС: Linux, Windows и macOS.
+3. **Docker Build** — собирает Docker-образы для всех 4 сервисов параллельно. Проверяется сборка сразу под две архитектуры: linux/amd64 и linux/arm64.
 
 
 ## Рекомендуемые расширения для VS Code

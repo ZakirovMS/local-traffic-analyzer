@@ -4,15 +4,21 @@ on:
   push:
     branches: [master]
     paths:
-      - 'cmd/**'
+      - '**/*.go'
       - 'go.mod'
       - 'go.sum'
+      - 'Dockerfile'
+      - '.dockerignore'
+      - '.github/workflows/ci-go.yml'
   pull_request:
     branches: [master]
     paths:
-      - 'cmd/**'
+      - '**/*.go'
       - 'go.mod'
       - 'go.sum'
+      - 'Dockerfile'
+      - '.dockerignore'
+      - '.github/workflows/ci-go.yml'
 
 permissions:
   contents: read
@@ -53,6 +59,10 @@ jobs:
           cache: true
 
       - name: Run tests
+        run: go test ./...
+
+      - name: Run race detector
+        if: runner.os == 'Linux'
         run: go test -race ./...
 
   docker-build:

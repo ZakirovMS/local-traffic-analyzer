@@ -68,6 +68,17 @@
 - `build(root): add new dependence in go.mod`
 - `feat(cmd/lta-analyzer): realisation of main logic`
 
+## Связь Pull Request с Issues
+
+Каждый PR должен ссылаться на связанный Issue в описании, если такой Issue есть.
+
+**Используйте ключевые слова:**
+- `Closes #123` — полностью закрывает задачу после слияния PR.
+- `Part of #123` — выполняет часть задачи, Issue остаётся открытым.
+- `Related to #123` — просто указывает на связь с Issue.
+
+Вместо `123` указывается номер Issue. Вводите # и гитхаб подскажет вам номер существующего Issue.
+
 ## Документация
 * [Правила разработки и Git-flow (CONTRIBUTING.md)](./CONTRIBUTING.md)
 * [Документация по Go-бэкенду](./cmd/README.md)

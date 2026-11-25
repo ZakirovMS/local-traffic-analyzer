@@ -1,0 +1,75 @@
+
+name: "Discussion"
+description: "Discuss architecture, implementation details or technical decisions"
+title: "[DISCUSSION] "
+labels:
+  - discussion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this issue to discuss a technical question and reach an agreement.
+        Do not create implementation tasks here unless they are clearly defined.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which parts of the project are involved?
+      multiple: true
+      options:
+        - Backend
+        - Frontend
+        - Database
+        - DevOps / Infrastructure
+        - Integration
+        - Architecture
+    validations:
+      required: true
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic
+      description: What needs to be discussed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: Questions
+      description: What exactly needs to be clarified?
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposals
+    attributes:
+      label: Proposed Solutions
+      description: Possible approaches, if any.
+    validations:
+      required: false
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: Final Decision
+      description: Fill in after the discussion.
+    validations:
+      required: false
+
+  - type: textarea
+    id: follow_up
+    attributes:
+      label: Follow-up Tasks
+      description: Issues that should be created after reaching an agreement.
+      placeholder: |
+        - #123
+        - #124
+    validations:
+      required: false

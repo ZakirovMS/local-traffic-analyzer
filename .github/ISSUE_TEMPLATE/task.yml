@@ -1,0 +1,39 @@
+name: "Task"
+description: "Create a task"
+title: "[TASK] "
+labels:
+  - "task"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe one specific task.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done?
+      placeholder: Describe the expected result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Additional information, links, decisions or technical details.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What are the conditions for this task to be considered complete?
+      placeholder: |
+        - [ ] Expected behavior is implemented
+        - [ ] Changes are tested
+        - [ ] Documentation is updated if necessary
+    validations:
+      required: true

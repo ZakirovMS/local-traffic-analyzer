@@ -1,39 +1,39 @@
-name: "Task"
-description: "Create a task"
+name: "Задача"
+description: "Создать задачу"
 title: "[TASK] "
 labels:
-  - "task"
+  - task
 body:
   - type: markdown
     attributes:
       value: |
-        Describe one specific task.
+        Опишите одну конкретную задачу.
 
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: What needs to be done?
-      placeholder: Describe the expected result.
+      label: Описание
+      description: Что необходимо сделать?
+      placeholder: Опишите ожидаемый результат.
     validations:
       required: true
 
   - type: textarea
     id: context
     attributes:
-      label: Context
-      description: Additional information, links, decisions or technical details.
+      label: Контекст
+      description: Дополнительная информация, ссылки, принятые решения или технические детали.
     validations:
       required: false
 
   - type: textarea
     id: acceptance_criteria
     attributes:
-      label: Acceptance Criteria
-      description: What are the conditions for this task to be considered complete?
+      label: Критерий успешного выполнения
+      description: При каких условиях задача считается выполненной?
       placeholder: |
-        - [ ] Expected behavior is implemented
-        - [ ] Changes are tested
-        - [ ] Documentation is updated if necessary
+        - [ ] Необходимая функциональность реализована
+        - [ ] Изменения протестированы
+        - [ ] Документация обновлена при необходимости
     validations:
       required: true

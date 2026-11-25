@@ -1,5 +1,5 @@
-name: "Bug Report"
-description: "Report an unexpected behavior or defect"
+name: "Сообщение об ошибке"
+description: "Сообщить о неожиданном поведении или неисправности"
 title: "[BUG] "
 labels:
   - bug
@@ -7,15 +7,16 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: What happened?
+      label: Описание
+      description: Что произошло?
     validations:
       required: true
 
   - type: textarea
     id: reproduction
     attributes:
-      label: Steps to Reproduce
+      label: Шаги для воспроизведения
+      description: Какие действия приводят к возникновению ошибки?
       placeholder: |
         1. ...
         2. ...
@@ -26,21 +27,23 @@ body:
   - type: textarea
     id: expected
     attributes:
-      label: Expected Behavior
+      label: Ожидаемое поведение
+      description: Как приложение должно было себя вести?
     validations:
       required: true
 
   - type: textarea
     id: actual
     attributes:
-      label: Actual Behavior
+      label: Фактическое поведение
+      description: Как приложение ведёт себя на самом деле?
     validations:
       required: true
 
   - type: textarea
     id: environment
     attributes:
-      label: Environment
-      description: "The conditions in which the error occurred: OS, browser, ets."
+      label: Окружение
+      description: "Условия возникновения ошибки: ОС, браузер, версия приложения, Docker и т. д."
     validations:
       required: false

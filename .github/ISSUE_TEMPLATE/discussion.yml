@@ -1,6 +1,5 @@
-
-name: "Discussion"
-description: "Discuss architecture, implementation details or technical decisions"
+name: "Обсуждение"
+description: "Обсудить архитектуру и детали реализации"
 title: "[DISCUSSION] "
 labels:
   - discussion
@@ -8,38 +7,21 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this issue to discuss a technical question and reach an agreement.
-        Do not create implementation tasks here unless they are clearly defined.
-
-  - type: dropdown
-    id: area
-    attributes:
-      label: Area
-      description: Which parts of the project are involved?
-      multiple: true
-      options:
-        - Backend
-        - Frontend
-        - Database
-        - DevOps / Infrastructure
-        - Integration
-        - Architecture
-    validations:
-      required: true
+        Используйте это обсуждение для рассмотрения технического вопроса и согласования решений.
 
   - type: textarea
     id: topic
     attributes:
-      label: Topic
-      description: What needs to be discussed?
+      label: Тема обсуждения
+      description: Что необходимо обсудить?
     validations:
       required: true
 
   - type: textarea
     id: questions
     attributes:
-      label: Questions
-      description: What exactly needs to be clarified?
+      label: Вопросы
+      description: Что именно необходимо выяснить или согласовать?
       placeholder: |
         1. ...
         2. ...
@@ -50,26 +32,15 @@ body:
   - type: textarea
     id: proposals
     attributes:
-      label: Proposed Solutions
-      description: Possible approaches, if any.
+      label: Предложения
+      description: Возможные варианты реализации или решения проблемы.
     validations:
       required: false
 
   - type: textarea
     id: decision
     attributes:
-      label: Final Decision
-      description: Fill in after the discussion.
-    validations:
-      required: false
-
-  - type: textarea
-    id: follow_up
-    attributes:
-      label: Follow-up Tasks
-      description: Issues that should be created after reaching an agreement.
-      placeholder: |
-        - #123
-        - #124
+      label: Итоговое решение
+      description: Заполните после завершения обсуждения.
     validations:
       required: false
